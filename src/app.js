@@ -19,6 +19,7 @@ while(cards.length > 0) {
 }
 var state = "waiting for click 1";
 var player = 0;
+var scores = [0,0];
 var card1;
 var points = [0,0];
 
@@ -28,10 +29,13 @@ console.log(board);
 
 canvas.onclick = function(event) {
   event.preventDefault();
+  var rect = canvas.getBoundingClientRect();
+  var xx = event.clientX - rect.left;
+  var yy = event.clientY - rect.top;
   // TODO: determine which card was clicked on
   // TODO: determine what to do
-  var x = (Math.floor((event.clientX -3)/ 165);
-  var y = Math.floor((event.clientY-3)/165);
+  var x = (Math.floor((xx -3)/ 165));
+  var y = Math.floor((yy-3)/165);
   var card = board[y * 6 + x];
   if(!card || card.flipp) return;
   card.flip == true;
@@ -108,5 +112,8 @@ function render(elapsedTime, ctx) {
       }
     }
   }
-
+  /* ctx.fillStyle = '#ff0000';
+  ctx.beginPath();
+  ctx.arc(currentX, currentY, 3,0,2*Math.PI);
+  ctx.fill(); */
 }
