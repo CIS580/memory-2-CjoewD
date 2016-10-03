@@ -22,6 +22,14 @@ var player = 0;
 var scores = [0,0];
 var card1;
 var points = [0,0];
+var blip - new Audio();
+blip.src = 'blip.wav';
+var flip - new Audio();
+blip.src = 'flip.wav';
+//blip.play();
+var pair - new Audio();
+blip.src = 'pair.wav';
+
 
 console.log(board);
 
