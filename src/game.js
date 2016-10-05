@@ -10,7 +10,7 @@ module.exports = exports = Game;
  * Creates a new game object
  * @param {canvasDOMElement} screen canvas object to draw into
  * @param {function} updateFunction function to update the game
- * @param {function} renderFunction function to render the game.
+ * @param {function} renderFunction function to render the game..
  */
 function Game(screen, updateFunction, renderFunction) {
   this.update = updateFunction;
